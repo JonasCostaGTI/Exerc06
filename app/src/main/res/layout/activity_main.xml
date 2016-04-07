@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.matheus.exerc06.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Informações para vistoria do carro:"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Placa do Veiculo:"
+        android:id="@+id/idPlaca"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/idCampoPlaca"
+        android:layout_below="@+id/idPlaca"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/idPlaca" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Marca do Veiculo:"
+        android:id="@+id/idMarca"
+        android:layout_below="@+id/idCampoPlaca"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/idCampoMarca"
+        android:layout_below="@+id/idMarca"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/idCampoPlaca" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modelo do Veiculo:"
+        android:id="@+id/idModelo"
+        android:layout_below="@+id/idCampoPlaca"
+        android:layout_toEndOf="@+id/idMarca"
+        android:layout_marginStart="34dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/idCampoModelo"
+        android:layout_alignBottom="@+id/idCampoMarca"
+        android:layout_alignStart="@+id/idModelo"
+        android:layout_alignEnd="@+id/idModelo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome do Proprietario:"
+        android:id="@+id/idProprietario"
+        android:layout_below="@+id/idCampoMarca"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/idCampoProprietario"
+        android:layout_below="@+id/idProprietario"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/idProprietario" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CPF:"
+        android:id="@+id/idCpf"
+        android:layout_above="@+id/idCampoProprietario"
+        android:layout_alignStart="@+id/idCampoModelo" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/idCampoCpf"
+        android:layout_alignBottom="@+id/idCampoProprietario"
+        android:layout_alignStart="@+id/idCpf" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Endereço:"
+        android:id="@+id/idEndereco"
+        android:layout_below="@+id/idCampoProprietario"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="19dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/idCampoEndereco"
+        android:layout_below="@+id/idEndereco"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/idCampoProprietario" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salvar dados"
+        android:id="@+id/idSalvarDados"
+        android:onClick="adiciona"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/idCampoCpf" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/mostra"
+        android:layout_above="@+id/idSalvarDados"
+        android:layout_toEndOf="@+id/idEndereco"
+        android:layout_marginBottom="34dp" />
+
+</RelativeLayout>
